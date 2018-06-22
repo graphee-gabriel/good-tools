@@ -1,0 +1,22 @@
+.ZDropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.ZDropzone-Card {
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.ZDropzone-Title {
+  padding: 4px;
+}
+
+.ZDropzone-Description {
+  padding: 4px;
+}

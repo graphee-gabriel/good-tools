@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: sans-serif;
+  width: 100vw;
+  max-width: 100vw;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+
+* {
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 8px;
+}
+
+h3 {
+  font-weight: bold;
+  padding: 8px;
+}
+
+ul {
+  padding: 8px;
+}
+
+li {
+  padding-left: 1.3em;
+  opacity: 0.5;
+}
+
+li:before {
+  content: "\f138";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  /* same as padding-left set on li */
+  width: 1.3em;
+  /* same as padding-left set on li */
+}
+
+small {
+  display: flex;
+  font-size: 13px;
+  opacity: 0.5;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* div, p {
+  display: flex;
+  flex-direction: column;
+} */
+
+a {
+  color: black;
+  /* blue colors for links too */
+  text-decoration: none;
+  /* no underline */
+}
+
+
+button {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 8px;
+  border: solid 0px transparent;
+  border-radius: 6px;
+  color: white;
+  background-color: rgba(29, 29, 29, 1);
+  cursor: pointer;
+}
+
+button a {
+  color: unset;
+  flex: 1;
+  padding: 8px;
+}
+
+
+button p {
+  flex: 1;
+  padding: 8px;
+}
+
+
+button:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: initial;
+}
+
+button:hover:disabled{
+  background-color: rgba(29, 29, 29, 1);
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+.Line {
+  display: flex;
+  align-items: center;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5, */
+
+code {
+  display: flex;
+  border: solid 0px transparent;
+  white-space: pre-line;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 8px;
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 13px;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.padding-half {
+  padding: 8px;
+}
+
+.margin {
+  margin: 16px;
+}
+
+.margin-half {
+  margin: 8px;
+}
+
+.clickable {
+  cursor: pointer;
+}

@@ -1,0 +1,67 @@
+.Select {
+  width: inherit;
+}
+
+.Select-control {
+  border-radius: 7.5px !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  padding: 2px;
+}
+
+.Select-menu-outer {
+  border-radius: 0px 0px 7.5px 7.5px !important;
+  /* border-color: rgba(141, 221, 241, 1.0) !important; */
+  border-color: rgba(0, 0, 0, 0.03) !important;
+  /* border-top-color: rgba(0, 0, 0, 0.0); */
+  margin-top: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  /* padding-bottom: 5px; */
+}
+
+.Select--multi .Select-value {
+  background-color: rgba(1, 1, 1, 0.06) !important;
+  border: 1px solid rgba(1, 1, 1, 0.03) !important;
+  color: rgba(1, 1, 1, 1.0) !important;
+  border-radius: 7.5px !important;
+  padding: 2px 6px !important;
+  margin: 2px !important;
+}
+
+.Select--multi .Select-value-icon {
+  border-right: 1px solid rgba(1, 1, 1, 0.03) !important;
+  padding: 0px 4px 0px 2px !important;
+}
+
+.Select--multi .Select-value-label {
+  color: rgba(1, 1, 1, 1.0) !important;
+}
+
+.Select-value-label {
+  /* color: rgba(141, 221, 241, 1.0)  !important; */
+  color: rgba(0, 0, 0, 1.0) !important;
+  vertical-align: center !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.Select-value {
+  display: flex;
+  align-items: center;
+}
+
+.Select-placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.Select.is-focused.is-open>.Select-control {
+  border-color: rgba(0, 0, 0, 0.03) !important;
+  border-radius: 7.5px 7.5px 0px 0px !important;
+  border-bottom-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.Select.is-focused:not(is-open)>.Select-control {
+  border-color: rgba(141, 221, 241, 0.0) !important;
+  border-radius: 7.5px !important;
+}

@@ -1,0 +1,13 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+  .Page {
+    padding: 8px;
+    max-width: 100vw;
+  }
+}

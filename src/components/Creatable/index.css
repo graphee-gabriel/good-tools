@@ -1,0 +1,6 @@
+.ZCreatable {
+ flex: 1;
+ max-width: inherit;
+ width: inherit;
+ margin: 8px;
+}

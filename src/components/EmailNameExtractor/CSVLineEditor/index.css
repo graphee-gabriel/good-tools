@@ -1,0 +1,14 @@
+.CSVLineEditor {
+  padding: 8px;
+  /* flex-direction: row; */
+}
+@media screen and (max-width: 768px) { 
+  .CSVLineEditor {
+    /* flex-direction: column; */
+  }
+}
+
+.CSVLineEditor-Creatable {
+  margin: 8px;
+  flex: 1;
+}
