@@ -1,11 +1,8 @@
 import React from 'react'
 import {
   Stepper,
-  MobileStepper,
   Step,
   StepLabel,
-  StepButton,
-  Button
 } from '@material-ui/core';
 import { withRouter } from 'react-router'
 
@@ -18,13 +15,13 @@ const WStepper = ({
   onClickStep,
   ...props
 }) => {
-  const stepCount = steps.length
+  // const stepCount = steps.length
   const pathSections = location.pathname.split('/')
   const activeStep = steps.findIndex(({ path }) => pathSections.includes(path))
-  const nextStep = activeStep + 1
-  const previousStep = activeStep - 1
-  const nextStepTitle = nextStep < stepCount && steps[nextStep]
-  const previousStepTitle = previousStep > -1 && steps[previousStep]
+  // const nextStep = activeStep + 1
+  // const previousStep = activeStep - 1
+  // const nextStepTitle = nextStep < stepCount && steps[nextStep]
+  // const previousStepTitle = previousStep > -1 && steps[previousStep]
   return (
     <Stepper
       {...{ activeStep }}

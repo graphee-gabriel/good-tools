@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import id3 from 'id3js'
 
 import { 
-  capitalizeFirstLetter, 
-  removeComma, 
   clean 
 } from '../utils/StringUtils'
 

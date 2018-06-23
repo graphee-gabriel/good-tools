@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
-import parse from 'csv-parse'
 import { Switch, Route, Redirect, withRouter } from 'react-router'
 
 import {
   capitalizeFirstLetter,
   extractEmailParts,
   buildNamesFromEmails,
-  // removeComma, 
-  clean
 } from '../../utils/StringUtils'
 import {
   readTextFile
@@ -19,11 +16,7 @@ import PreviewScreen from './PreviewScreen'
 import ExportScreen from './ExportScreen'
 
 import Page from '../../components/Page'
-import Dropzone from '../../components/Dropzone'
-import Select from '../../components/Select'
-import Creatable from '../../components/Creatable'
 import Stepper from '../../components/Stepper'
-import CSVLineEditor from '../../components/EmailNameExtractor/CSVLineEditor'
 
 const SAVE_STATE_INTERVAL = 5000
 
@@ -301,10 +294,10 @@ class EmailNameExtractorScreen extends Component {
 
       if (firstName) {
         let lastName
-        if (emailParts.length == 1) {
+        if (emailParts.length === 1) {
           const part = emailParts[0]
           lastName = part.replace(firstName.toLowerCase(), '')
-        } else if (emailParts.length == 2) {
+        } else if (emailParts.length === 2) {
           emailParts.forEach(part => {
             if (part !== firstName.toLowerCase())
               lastName = part
@@ -327,7 +320,7 @@ class EmailNameExtractorScreen extends Component {
     lines.forEach(line => {
       headers.forEach((header, i) => {
         let value = line[header]
-        if (!value || value == null || value == undefined || value === 'null' || value === 'undefined')
+        if (!value || value == null || value === undefined || value === 'null' || value === 'undefined')
           value = ''
         csv += value
         if (i < headers.length - 1)
@@ -348,13 +341,6 @@ class EmailNameExtractorScreen extends Component {
   render() {
     const {
       csv,
-      fieldEmail,
-      fieldFirstName,
-      fieldLastName,
-      firstNameValues,
-      firstNameOptions,
-      options,
-      lines,
       showOnlyCsv
     } = this.state
 

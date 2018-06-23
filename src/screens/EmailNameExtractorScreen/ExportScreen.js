@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
-import Creatable from '../../components/Creatable'
-import Page from '../../components/Page'
 
 class SelectFirstNamesScreen extends Component {
   state = {

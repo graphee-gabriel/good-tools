@@ -6,7 +6,6 @@ import {
 } from '../../utils/StringUtils'
 
 import Creatable from '../../components/Creatable'
-import Page from '../../components/Page'
 import Card from '../../components/Card'
 
 class SelectFirstNamesScreen extends Component {

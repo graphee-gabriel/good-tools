@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import Page from '../../components/Page'
 import Select from '../../components/Select'
 import CSVLineEditor from '../../components/EmailNameExtractor/CSVLineEditor'
 const FILTER_OPTIONS = [
@@ -50,7 +49,7 @@ class PreviewScreen extends Component {
       linesWithIndex = lines.filter(line => {
         const firstName = line[fieldFirstName.value]
         // const lastName = line[lastName.value]
-        return (firstName != null && firstName != undefined && firstName !== '') === showOnlyMatch
+        return (firstName != null && firstName !== undefined && firstName !== '') === showOnlyMatch
       }).map((line, i) => ({ line, lineIndex: i }))
     }
     return (

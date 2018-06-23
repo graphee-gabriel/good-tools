@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import Dropzone from '../../components/Dropzone'
 import Select from '../../components/Select'
-import Page from '../../components/Page'
 import LinkButton from '../../components/LinkButton'
 
 class UploadCSVScreen extends Component {
