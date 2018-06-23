@@ -182,13 +182,13 @@ class EmailNameExtractorScreen extends Component {
           let line = {}
           array.forEach((x, i) => {
             if (i < options.length)
-              line[options[i].label] = x && x.replace(/'/g , '').replace(/"/g , '')
+              line[options[i].label] = x && x.replace(/'/g, '').replace(/"/g, '')
           })
           lines.push(line)
         })
         let fieldEmail, fieldFirstName, fieldLastName
         options.forEach(({ value }) => {
-          const valueClean = value.toLowerCase().replace(/'/g , '').replace(/"/g , '')
+          const valueClean = value.toLowerCase().replace(/'/g, '').replace(/"/g, '')
           EMAIL_FIELD_NAMES.forEach(variant => {
             if (!fieldEmail && valueClean.indexOf(variant) !== -1)
               fieldEmail = { value, label: value }
@@ -276,18 +276,24 @@ class EmailNameExtractorScreen extends Component {
       emailParts.forEach(part => {
         // console.log('part', part)
         if (!firstName && firstNames.indexOf(part) !== -1) {
-          firstName = capitalizeFirstLetter(part)
-        }
-        if (!firstName) {
-          firstNames.forEach(first => {
-            if (first.length > 3 && (!firstName || first.length > firstName.length) && part.indexOf(first) !== -1)
-              firstName = capitalizeFirstLetter(first)
-          })
+          firstName = part
         }
       })
 
+      if (!firstName && emailParts.length === 1) {
+        const part = emailParts[0]
+        firstNames.forEach(first => {
+          if (
+            first.length > 3 && // -> no name should be less than 3 chars, at least in term of matchin, filters out many wrong match
+            (!firstName || first.length > firstName.length) // we have a better match (longer name -> more char matching)
+            && part.indexOf(first) !== -1 // we found you in that part
+          )
+            firstName = first
+        })
+      }
+
       if (firstName) {
-        lines[i][fieldFirstName.value] = firstName
+        lines[i][fieldFirstName.value] = capitalizeFirstLetter(firstName)
       } else {
         emailsWithoutMatch.push(email)
       }
